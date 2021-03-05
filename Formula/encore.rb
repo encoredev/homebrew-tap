@@ -1,21 +1,18 @@
 class Encore < Formula
   desc "The static analysis-powered Go framework for building backend applications"
   homepage "https://encore.dev"
-  version "0.9.1"
+  version "0.9.2"
   license ""
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://d2f391esomvqpi.cloudfront.net/encore-0.9.1-darwin_amd64.tar.gz"
-    sha256 "dd49bcc1bfcd22782ae206288f4ca7ffe00f13d50c9ade8e00e9416bbaa5360e"
+    url "https://d2f391esomvqpi.cloudfront.net/encore-0.9.2-darwin_amd64.tar.gz"
+    sha256 "9600ceae208463762fd28d17bfced831c360e9aee655c28fa16815078ba22a7e"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://d2f391esomvqpi.cloudfront.net/encore-0.9.1-darwin_arm64.tar.gz"
-    sha256 "94724703982ce3d913b48bec4d36977e1c264cefe861f27778e86098638cd65a"
+    url "https://d2f391esomvqpi.cloudfront.net/encore-0.9.2-darwin_arm64.tar.gz"
+    sha256 "490a84f6484b1472fd1f29ffc3d1b76a567b06a14b5b1017ab137cb1a386c43a"
   end
-
-  depends_on "wireguard-tools" => :recommended
-  depends_on "wireguard-go" => :recommended
 
   def install
     libexec.install Dir["*"]
