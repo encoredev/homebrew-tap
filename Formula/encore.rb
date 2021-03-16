@@ -6,12 +6,12 @@ class Encore < Formula
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://d2f391esomvqpi.cloudfront.net/encore-0.9.9-darwin_amd64.tar.gz"
-    sha256 "3c164bf99ed0d59be0d196895102ed962d737542ba23cff70f2d2755417b4db1"
+    url "https://d2f391esomvqpi.cloudfront.net/encore-0.10.0-darwin_amd64.tar.gz"
+    sha256 "276dcfba63bd53239de83f6e3ee614cf70887e5a7304bb891e11f2a30dde49a3"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://d2f391esomvqpi.cloudfront.net/encore-0.9.9-darwin_arm64.tar.gz"
-    sha256 "43327a54e67fb0ab42fcce480ba1a776c19dfaa35c96a33368ebf5e652a35d0e"
+    url "https://d2f391esomvqpi.cloudfront.net/encore-0.10.0-darwin_arm64.tar.gz"
+    sha256 "b03474b0007437af4ac4d5d4ebe69774966c7e4f8092635d8bc8e18c2a261dca"
   end
 
   def install
