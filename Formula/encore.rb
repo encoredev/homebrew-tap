@@ -3,7 +3,6 @@ class Encore < Formula
   homepage "https://encore.dev"
   version "0.17.2"
   license ""
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://d2f391esomvqpi.cloudfront.net/encore-0.17.2-darwin_amd64.tar.gz"
