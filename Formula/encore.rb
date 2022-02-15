@@ -2,7 +2,8 @@ class Encore < Formula
   desc "The static analysis-powered Go framework for building backend applications"
   homepage "https://encore.dev"
   version "0.18.0"
-  license ""
+  license "Mozilla Public License, version 2.0"
+  head "https://github.com/encoredev/encore.git", branch: "main"
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://d2f391esomvqpi.cloudfront.net/encore-0.18.0-darwin_amd64.tar.gz"
@@ -16,6 +17,18 @@ class Encore < Formula
   def install
     libexec.install Dir["*"]
     bin.install_symlink Dir[libexec/"bin/*"]
+
+    # Install bash completion
+    output = Utils.safe_popen_read(bin/"encore", "completion", "bash")
+    (bash_completion/"encore").write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read(bin/"encore", "completion", "zsh")
+    (zsh_completion/"_encore").write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read(bin/"encore", "completion", "fish")
+    (fish_completion/"encore.fish").write output
   end
 
   test do
