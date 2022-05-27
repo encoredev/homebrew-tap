@@ -1,17 +1,17 @@
 class Encore < Formula
   desc "The static analysis-powered Go framework for building backend applications"
   homepage "https://encore.dev"
-  version "1.1.0"
+  version "1.2.0"
   license "Mozilla Public License, version 2.0"
   head "https://github.com/encoredev/encore.git", branch: "main"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://d2f391esomvqpi.cloudfront.net/encore-1.1.0-darwin_amd64.tar.gz"
-    sha256 "813adcb1b21ed23a2842e81acf5939bf4c55292e7827d5217c4e38cd43436101"
+    url "https://d2f391esomvqpi.cloudfront.net/encore-1.2.0-darwin_amd64.tar.gz"
+    sha256 "0b7cf64f83e8f4f41da153bdca7e7b93a4c7798b76e4bdb6c121d3a4c3b56c19"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://d2f391esomvqpi.cloudfront.net/encore-1.1.0-darwin_arm64.tar.gz"
-    sha256 "80332c793b4d447bd4381b20ea79cc0359c8a274f08314a331b5384f8837e21d"
+    url "https://d2f391esomvqpi.cloudfront.net/encore-1.2.0-darwin_arm64.tar.gz"
+    sha256 "1184e36ab21e849e427da371182e02043ce3424b6db49b4ce30fdc92631e18ad"
   end
 
   def install
