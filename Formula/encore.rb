@@ -7,7 +7,7 @@ class Encore < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://d2f391esomvqpi.cloudfront.net/encore-1.9.1-test-darwin_amd64.tar.gz"
-    sha256 "sha1"
+    sha256 "sha123"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://d2f391esomvqpi.cloudfront.net/encore-1.9.1-test-darwin_arm64.tar.gz"
