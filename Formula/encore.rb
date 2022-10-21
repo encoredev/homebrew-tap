@@ -19,7 +19,7 @@ class Encore < Formula
   end
   if OS.linux? && Hardware::CPU.arm?
     url "https://d2f391esomvqpi.cloudfront.net/encore-1.9.1-test-linux_arm64.tar.gz"
-    sha256 "sha4432"
+    sha256 "sha443249"
   end
 
   def install
