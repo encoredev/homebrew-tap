@@ -1,4 +1,4 @@
-class EncoreATnighly < Formula
+class EncoreATnightly < Formula
     desc "The static analysis-powered Go framework for building backend applications"
     homepage "https://encore.dev"
     license "Mozilla Public License, version 2.0"
