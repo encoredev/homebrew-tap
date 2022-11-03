@@ -6,10 +6,10 @@ class Encore < Formula
 
     release_version = "1.10.1"
     checksums = {
-        "darwin_arm64" => "a4473aa6e00b33774a2d45eef9cd70cc18671578f69afc7f038cde38164bb836",
-        "darwin_amd64" => "ff6c1f67c202e886dad83bc5b80cabbbc378d4062773f07006b12ed34c0ac1a5",
-        "linux_arm64"  => "30c4b7c45bd01d539542f24a6cd49a05e8f6a16f2f0d58f350cb6628f09e5520",
-        "linux_amd64"  => "8b9d423832724219e37aecaae420290b8ff9785ddda554d7c0607fbb3aefbc35",
+        "darwin_arm64" => "c19a199f55986e73cdc9cd89a1e838c99fd4c83ffe7d417272c86df55bc1ce04",
+        "darwin_amd64" => "bae4b26a96ffa85edcfec0bfe28d62fb396d3e0636cc9d0f9d5eda5d3b037865",
+        "linux_arm64"  => "535461be3e9488ead1e1e47a23d97ba2b77c91b9c21ff1a6e90856ea06d1944a",
+        "linux_amd64"  => "fb7d9910b7627bb8fa4eeb662f29079c8c6ea273c91294b34f9fdbb29f2414bf",
     }
 
     arch = "arm64"
