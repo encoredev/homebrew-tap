@@ -2,7 +2,6 @@ class Encore < Formula
     desc "The static analysis-powered Go framework for building backend applications"
     homepage "https://encore.dev"
     license "Mozilla Public License, version 2.0"
-    head "https://github.com/encoredev/encore.git", branch: "main"
 
     release_version = "1.27.5"
     checksums = {
