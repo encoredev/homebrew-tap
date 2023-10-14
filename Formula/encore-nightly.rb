@@ -6,10 +6,10 @@ class EncoreNightly < Formula
 
     release_version = "nightly-20231014"
     checksums = {
-        "darwin_arm64" => "4f9103ccacce5198a923e388ea33e67cc366bf7570125085e67074cf4af1f8cd",
-        "darwin_amd64" => "9172bbf233d36ab495222a69bb3b9014ba29ea57b68080973debc37753a14940",
-        "linux_arm64"  => "a339bf8f41fb2a607753a883fff0aec39c81b103481181c30c5a19208870aab2",
-        "linux_amd64"  => "d6cfd00d64ad98923be51d27c1f6c83448b0f5b4826271524d904fad4df6ec9c",
+        "darwin_arm64" => "e02664e34822e6fca29e692e09d95deed385b5a3df90b8eec12de4d440bfb1e0",
+        "darwin_amd64" => "df8dda46e66f2d330cf81aa83d2dd4ec918c79c51c142d565b2c0adbb926641d",
+        "linux_arm64"  => "5047e844867500a428360a986795d8843bcfa6d8bbc7983857a31469e6efcb67",
+        "linux_amd64"  => "ee2e5b82ce3ab023158ea66042fa21393af7404bdf612634528406973a7d2680",
     }
 
     arch = "arm64"
