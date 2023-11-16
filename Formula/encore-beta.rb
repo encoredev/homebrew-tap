@@ -27,19 +27,21 @@ class EncoreBeta < Formula
 
     def install
         libexec.install Dir["*"]
-        bin.install_symlink Dir[libexec/"bin/*"]
+
+        bin.install_symlink libexec/"bin/encore-beta"
+
 
         # Install bash completion
         output = Utils.safe_popen_read(bin/"encore-beta", "completion", "bash")
-        (bash_completion/"encore").write output
+        (bash_completion/"encore-beta").write output
 
         # Install zsh completion
         output = Utils.safe_popen_read(bin/"encore-beta", "completion", "zsh")
-        (zsh_completion/"_encore").write output
+        (zsh_completion/"_encore-beta").write output
 
         # Install fish completion
         output = Utils.safe_popen_read(bin/"encore-beta", "completion", "fish")
-        (fish_completion/"encore.fish").write output
+        (fish_completion/"encore-beta.fish").write output
     end
 
     test do
