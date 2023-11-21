@@ -4,12 +4,12 @@ class Encore < Formula
     license "Mozilla Public License, version 2.0"
     head "https://github.com/encoredev/encore.git", branch: "main"
 
-    release_version = "1.28.0"
+    release_version = "1.30.0"
     checksums = {
-        "darwin_arm64" => "66871d9ec15fbd358605523a22f9646375d0112d19e4c450d0d95ec4d8e27735",
-        "darwin_amd64" => "4ef8af23ebb6db7a0374d0754a19b5e14e8948cae3dbd57d899afdca9d0d7862",
-        "linux_arm64"  => "29e85e46c60b3c568ed670caaf2087a61a585a9c6ba9b02ba47cfd5e31d6c299",
-        "linux_amd64"  => "067baf3721a1589365a8714ef9c2075a9da26222dc21dde328e92bfee92c7675",
+        "darwin_arm64" => "cba04dacd6c1c101432b43510eae95e411e8234f86fb01bef147778a46d41c34",
+        "darwin_amd64" => "fab3fbe38c760fa24a7c53b0cb610e46159e4796c6365680388405de2fbd0f10",
+        "linux_arm64"  => "4277dd5049eddca8d47418233b96ee86692b913bdfda70c8aa1b12ef45e2d646",
+        "linux_amd64"  => "7190089c7d734fb1467bba67deaaf33f717253504bec59b14fb727dd69d4080d",
     }
 
     arch = "arm64"
@@ -27,7 +27,9 @@ class Encore < Formula
 
     def install
         libexec.install Dir["*"]
+
         bin.install_symlink Dir[libexec/"bin/*"]
+
 
         # Install bash completion
         output = Utils.safe_popen_read(bin/"encore", "completion", "bash")
