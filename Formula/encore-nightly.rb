@@ -4,12 +4,12 @@ class EncoreNightly < Formula
     license "Mozilla Public License, version 2.0"
     head "https://github.com/encoredev/encore.git", branch: "main"
 
-    release_version = "1.32.0-nightly.20240229"
+    release_version = "1.32.0-nightly.20240301"
     checksums = {
-        "darwin_arm64" => "3af53ee3c7adf28630cff62b10d93721e4f4c8b561813bf2e9b36ef061283d7b",
-        "darwin_amd64" => "ee7aef720e8ea1689f1b1f11e02c30a90b1244bc3b48fc99bf002b21c8fe2bf1",
-        "linux_arm64"  => "fef203dd16f5e86d23692417269629de1a9b2caf4eea47021b073424b6d0a1c0",
-        "linux_amd64"  => "273ef3b3604830749444046ec71a91e91fa633c01619a9a7a61bd1a9f40e1ab8",
+        "darwin_arm64" => "ee9a6d5b7e1ee62c44a9f22d1686aa826c92feb5b8ae58e71372ca7517b78bb7",
+        "darwin_amd64" => "cd0ef787cdea6ab6029cacab843680b888d5ba95e26892697dbefbcac0d6f7f3",
+        "linux_arm64"  => "5af15b894b3b1855c137de9cd61720ff2e9f8c409b1e60b47c0a8bcf4581b6d5",
+        "linux_amd64"  => "01dfc7e8060d6a5389a1e570a22920ec4f130042048aac9a46cddc1f4a39196a",
     }
 
     arch = "arm64"
