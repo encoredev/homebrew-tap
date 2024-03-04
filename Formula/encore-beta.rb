@@ -6,10 +6,10 @@ class EncoreBeta < Formula
 
     release_version = "1.31.2-beta.6"
     checksums = {
-        "darwin_arm64" => "7390dbe6059de197b2a8491cba83d09623d17ca8476b8e3c586e6265d37b5706",
-        "darwin_amd64" => "bdef7cb005468f9ffef918ad73baca7cabbc52b6780582fd3ca53b9321391a29",
-        "linux_arm64"  => "760fed39226bc617297697d7b179613d93779536b492b6c9916f16ebc8e74c1c",
-        "linux_amd64"  => "f8ae56f9bb75e7a0b603e05af896069c179c1beb327eb66395fa5497af091c0f",
+        "darwin_arm64" => "486cf793c31b59c4f53a1b68c38e9b2d410f1375a728fb6d90b38818512c1e57",
+        "darwin_amd64" => "d642e12044d6f8da98c2b5b6b309c54cf6a374c0c3538d60779db15e086594df",
+        "linux_arm64"  => "6c1ca73c7386b7f334d38df03ab510471ffc2bf6cfde54c499bf3dbfdaeb0758",
+        "linux_amd64"  => "1c56d00e9c30fa42aa15653b29416ce85c85526293793d51a4c35eca27894360",
     }
 
     arch = "arm64"
