@@ -4,12 +4,12 @@ class Encore < Formula
     license "Mozilla Public License, version 2.0"
     head "https://github.com/encoredev/encore.git", branch: "main"
 
-    release_version = "1.39.0"
+    release_version = "1.39.1"
     checksums = {
-        "darwin_arm64" => "f71bdb1e67947ff1c87bd55d680522e935da54420875ac0575cfa4869e984e6b",
-        "darwin_amd64" => "b1c7f4d3853d92c8dd5486c9b494afa61baf9e48eab38ba00fd543a2e46ef01b",
-        "linux_arm64"  => "645d8c4a50d16ead99a3cc468c04c0a7e578d71972b0e5fcf05748a01c2b8070",
-        "linux_amd64"  => "8b8ef03bc61acae5a9cf90ad08c6cf4ae9ac45e3c6bdbb6626aa769ce270f196",
+        "darwin_arm64" => "1465345dadff72e09032dfcecaff3897882b77da6d9ac555265f8b3ac601e99f",
+        "darwin_amd64" => "6f69dc061f5d0b4ddf341b57a3fb51d867e50badd0717eac31050366e651eb6b",
+        "linux_arm64"  => "d8126312d696983d2a9640e6e2d1aac449fc2b9bca624954e1cb11aa75f8e4b7",
+        "linux_amd64"  => "a53b6aa918cc708fab4219d4cd3ccdf267cfd8d0bee9fc2dd36d7071f7fde3d7",
     }
 
     arch = "arm64"
