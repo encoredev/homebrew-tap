@@ -1,0 +1,38 @@
+# Replace the @...@ placeholders with a published release's version (without v)
+# and archive SHA-256 checksums, then save as Formula/encore-alpha.rb.
+class EncoreAlpha < Formula
+  desc "Encore v2 alpha CLI for building backend applications"
+  homepage "https://encore.dev"
+  license "MPL-2.0"
+
+  release_version = "@VERSION@"
+  checksums = {
+    "aarch64-apple-darwin" => "@SHA256_AARCH64_APPLE_DARWIN@",
+    "x86_64-apple-darwin" => "@SHA256_X86_64_APPLE_DARWIN@",
+    "aarch64-unknown-linux-gnu" => "@SHA256_AARCH64_UNKNOWN_LINUX_GNU@",
+    "x86_64-unknown-linux-gnu" => "@SHA256_X86_64_UNKNOWN_LINUX_GNU@",
+  }
+
+  arch = "aarch64"
+  platform = "apple-darwin"
+  on_intel do
+    arch = "x86_64"
+  end
+  on_linux do
+    platform = "unknown-linux-gnu"
+  end
+  target = "#{arch}-#{platform}"
+
+  url "https://d2f391esomvqpi.cloudfront.net/v2/v#{release_version}/encore-#{target}.tar.gz"
+  version release_version
+  sha256 checksums.fetch(target)
+
+  def install
+    libexec.install Dir["*"]
+    bin.install_symlink libexec/"bin/encore" => "encore-alpha"
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/encore-alpha --version")
+  end
+end
