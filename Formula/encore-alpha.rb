@@ -3,12 +3,12 @@ class EncoreAlpha < Formula
   homepage "https://encore.dev"
   license "MPL-2.0"
 
-  release_version = "2.0.0-alpha.8"
+  release_version = "2.0.0-alpha.12"
   checksums = {
-    "aarch64-apple-darwin" => "f9346e13f3f7a25af77432e08a4a9ab6752c21a71dbd36076ad259f0465d1eba",
-    "x86_64-apple-darwin" => "42777a07cf616d4867e3879e5e0ebf929a82d23bdb1f25d9e0fc4cab192eabb2",
-    "aarch64-unknown-linux-gnu" => "44caffc14b8391edb01489d480625540c7691ae1f357049fe48696f0f95018ad",
-    "x86_64-unknown-linux-gnu" => "b7ea561ba5fdb798643d9a380962f2c37748b849797cda85b948bbfa8a19fa0e",
+    "aarch64-apple-darwin" => "2a49b7c94ae3d5a2f7cc8ee8d3a8eef9bf8548c3a48d5fbdc0c5fa44a4f41637",
+    "x86_64-apple-darwin" => "6a84033d928c1fb33f0a35021790fca4a1230683abeddf468efc08b379663407",
+    "aarch64-unknown-linux-gnu" => "d74f75a0103d8abcf4f9188230a5b37e1f5d66616bd46e8de309225d0ca6f5e0",
+    "x86_64-unknown-linux-gnu" => "a2ca0770e27fb82760170376dcfe6ca6434afade44ac211d3dbff2896acf505a",
   }
 
   arch = "aarch64"
