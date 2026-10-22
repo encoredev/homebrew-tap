@@ -3,6 +3,11 @@ class EncoreAlpha < Formula
   homepage "https://encore.dev"
   license "MPL-2.0"
 
+  # Keep the bundled libraries' @rpath IDs.  Everything in the archive loads
+  # them by relative paths, and some (ICU's) have no header room for the
+  # absolute IDs Homebrew would write instead.
+  preserve_rpath
+
   release_version = "2.0.0-alpha.16"
   checksums = {
     "aarch64-apple-darwin" => "354e84a8686c7d3f70c0b6ccb2f59b5ba07eb6dc2c61af6d0b0d6cdefb3cbb26",
