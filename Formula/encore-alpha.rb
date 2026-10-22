@@ -3,12 +3,17 @@ class EncoreAlpha < Formula
   homepage "https://encore.dev"
   license "MPL-2.0"
 
-  release_version = "2.0.0-alpha.16"
+  # Keep the bundled libraries' @rpath IDs.  Everything in the archive loads
+  # them by relative paths, and some (ICU's) have no header room for the
+  # absolute IDs Homebrew would write instead.
+  preserve_rpath
+
+  release_version = "2.0.0-alpha.17"
   checksums = {
-    "aarch64-apple-darwin" => "354e84a8686c7d3f70c0b6ccb2f59b5ba07eb6dc2c61af6d0b0d6cdefb3cbb26",
-    "x86_64-apple-darwin" => "08358c9eaab6d0a3251ef3720b954da71cc9184bf7c89286c86a72603cb16af1",
-    "aarch64-unknown-linux-gnu" => "aa25168305d48d0bb822b6eceb2dbb08aa24d92c74ba5612f6677796b591e1bd",
-    "x86_64-unknown-linux-gnu" => "047c9d98cff4cd4663be3730315687b3f645704181feed6a3bbe342c7346b235",
+    "aarch64-apple-darwin" => "aa3aa338b403aad672f41e0007b5230cea2ea131600d7fbcb0d41e57ba8fef62",
+    "x86_64-apple-darwin" => "d6f93cd358edcebcddaaac0f129586c475a2e26624bd5c84283690f93a371ef6",
+    "aarch64-unknown-linux-gnu" => "ec5b105d55c0d582d4539519b754d0d9904047bd05be26410b3a93ab6e13fa81",
+    "x86_64-unknown-linux-gnu" => "de552d8358795417f2d3be7bbd2ad165f620408abef97b27c37c0081ef23e509",
   }
 
   arch = "aarch64"
