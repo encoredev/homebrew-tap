@@ -8,12 +8,12 @@ class EncoreBeta < Formula
   # absolute IDs Homebrew would write instead.
   preserve_rpath
 
-  release_version = "2.0.0-beta.4"
+  release_version = "2.0.0-beta.5"
   checksums = {
-    "aarch64-apple-darwin" => "c621c34783ae65c9e7e87d2f517761774bb74b5daa5dd72302f8721f818bd734",
-    "x86_64-apple-darwin" => "1085703e0ecd21b9324204e73b532a050d2e2d058a111ee31e40ad592257a05c",
-    "aarch64-unknown-linux-gnu" => "2d89ba913af12dbc6341676627a1c4ddbcc1e009c3d27b9851598492b903906f",
-    "x86_64-unknown-linux-gnu" => "eedb752f5b583cd01ff507f778546af06015ed16a170114f960c5c9326dd8675",
+    "aarch64-apple-darwin" => "efed0f2cc793f26c2938839c040a576bc7fc3bc6657bb96d6ed4c0f67d200177",
+    "x86_64-apple-darwin" => "acd07dee38613a40d2a59c6c72a119ad9a4abb60c9e0531a18c969474a029adc",
+    "aarch64-unknown-linux-gnu" => "e26bcb6aa40433c83af3c0746ba707536541e5b0223e66f5041559a1cbecc785",
+    "x86_64-unknown-linux-gnu" => "6d4bcc36c0d8f657c7a7a9f1fab66c4c3ef6986e191a9c34ff25a6c080e8bc0a",
   }
 
   arch = "aarch64"
