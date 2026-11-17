@@ -8,12 +8,12 @@ class EncoreBeta < Formula
   # absolute IDs Homebrew would write instead.
   preserve_rpath
 
-  release_version = "2.0.0-beta.7"
+  release_version = "2.0.0-beta.9"
   checksums = {
-    "aarch64-apple-darwin" => "b2cc045f04d4d8d3c8df9a3960c9367cc73f9d8df0158c028502171bf8bb3fb4",
-    "x86_64-apple-darwin" => "0a07eb23eee01cb0e8e5e093c4a19e1486cbb9e53a9e30557ccc1da529ac64d0",
-    "aarch64-unknown-linux-gnu" => "055eb160b9b6f28ac967662ac4c438710357a066bf358752d92e4c87d0b26706",
-    "x86_64-unknown-linux-gnu" => "9e6e22636696a51f90baf7b8f5d2083103b51fd909c43eca42a911c0e523d73c",
+    "aarch64-apple-darwin" => "2b2776d9db9561f9630eca86daff6ea767a8c72fa840caba8ce4ab8193321ef2",
+    "x86_64-apple-darwin" => "1952101ba28aee9ecd522744e13b40c76c40b7e2e2fe2143683c30cf42499323",
+    "aarch64-unknown-linux-gnu" => "976ae0305176dac8a8f937144e4684ea5f7a4392eaaf6067093f1cd9493482b2",
+    "x86_64-unknown-linux-gnu" => "26368a228989154dab15d5aa40850a646bb6ba35b3560f688175c96e644f851c",
   }
 
   arch = "aarch64"
@@ -33,6 +33,16 @@ class EncoreBeta < Formula
   def install
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/encore" => "encore-beta"
+  end
+
+  def caveats
+    <<~EOS
+      Encore downloads its optional parts, such as the Postgres local databases
+      run on and each language's runtime, when an app first needs them, and
+      keeps them apart from this formula. To fetch what an app needs now, run
+      in the app:
+        encore-beta component add
+    EOS
   end
 
   test do
