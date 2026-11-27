@@ -8,12 +8,12 @@ class EncoreBeta < Formula
   # absolute IDs Homebrew would write instead.
   preserve_rpath
 
-  release_version = "2.0.0-beta.14"
+  release_version = "2.0.0-beta.15"
   checksums = {
-    "aarch64-apple-darwin" => "16ca24b948cc0a46097f14b5ab9983d82161c51caf0635807be52f98aa979856",
-    "x86_64-apple-darwin" => "d98134cd6b4f014fc85f6c03a34ac02dd969580188de57b4b645fc5f5ea7db02",
-    "aarch64-unknown-linux-gnu" => "c02e1263fdf93d48d8ffee55b98867899a2dbd020ee3b1bd16ee43868658eaed",
-    "x86_64-unknown-linux-gnu" => "308b76f3a8ea8e786ec5a5634808f038f47205459134617254066e51888bbb2b",
+    "aarch64-apple-darwin" => "c1f82860586d53f7778ed4cb95c5a5ea6f8ba2c4a76fe679a900890760fe1035",
+    "x86_64-apple-darwin" => "4c30479ae730423d8ac9a0a35de8779db95fc50b52e851e8218ef7ca199ff61b",
+    "aarch64-unknown-linux-gnu" => "6028b7b6d9fa1f3a1810c090ee57da9c480f86729fffa354a47ebbb41d3379d3",
+    "x86_64-unknown-linux-gnu" => "b8af9fbf7ae3781364be362779c79b693f442e4d5e8e19aaee50b948388ebf57",
   }
 
   arch = "aarch64"
@@ -33,6 +33,15 @@ class EncoreBeta < Formula
   def install
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/encore" => "encore-beta"
+
+    # `git push` to an encore:// remote runs git-remote-encore, which git
+    # finds on PATH by that exact name, so only one formula can link it.
+    # Another Encore formula's (v1's, or another channel's) pushes the same
+    # way, so it is left in place; this formula's own, from the version being
+    # upgraded, is replaced.
+    linked = HOMEBREW_PREFIX/"bin/git-remote-encore"
+    other_formula = linked.exist? && !linked.realpath.to_s.start_with?("#{HOMEBREW_CELLAR}/#{name}/")
+    bin.install_symlink libexec/"bin/git-remote-encore" unless other_formula
   end
 
   def caveats
